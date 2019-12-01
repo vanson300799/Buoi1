@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <!-- Biểu mẫu form -->
+    <form name="Dang_Ky" method="post" action="">
+        <p>
+            <label>Nhập họ tên</label>
+            <input name="Nhap_ho_ten" type="text" placeholder="Nhập họ tên" value="">
+        </p><!--  input text -->
+        <p>
+            <label>SĐT</label>
+            <input name="Nhap_so_dien_thoai" type="text" value="" placeholder="Nhập số điện thoại">
+            <button>Gửi mã xác thực</button>
+        </p><!--  Phím nút bấm button -->
+        <p>
+            <label>Nhập email</label>
+            <input name="Nhap_email" type="email" value="" placeholder="nhập email">
+        </p><!--  Input email -->
+        <p>
+            <label>Nhập mật khẩu</label>
+            <input name="Nhap_mat_khau" type="password" value="" placeholder="Nhập mật khẩu"
+        </p><!--  Input password -->
+        <p>
+            <label>Giới Tính</label>
+            <input type="radio" name="Gioi_tinh" value="Nam" checked>Nam
+            <input type="radio" name="Gioi_tinh" value="Nữ">Nữ
+        </p><!--  Input radio -->
+        <p>
+            <label>Tháng</label>
+            <select name="Thang">
+                <option value="1">1</option selected>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </p><!-- select-option VD:Ngày,Tháng,Năm sinh -->
+        <p>
+            <label>Ghi Chú</label>
+            <textarea name="Nhap_ghi_chu" placeholder="Nhập ghi chú" rows="10" cols="50"></textarea>
+        </p><!-- nhập nhiều dòng văn bản textarea -->
+        <p>
+            <input type="checkbox" name="dang_ky" value="1" checked     >
+            Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
+        </p><!-- Input checkbox -->
+        <p>
+            <input type="submit" name="tao_tai_khoan" value="Tạo tài khoản">
+        </p><!-- Thẻ submit -->
+    </form>
+</div>
