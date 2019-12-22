@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 800px;
+            height: 800px;
+            background-color: green;
+            margin: 0 auto;
+        }
+        .container .col1{
+            width:200px;
+            height:200px;
+            background-color: blue;
+            float:left;
+        }
+        .container .col2 {
+            width:500px;
+            height:200px;
+            background-color: crimson;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        khi sử dụng float cho cols1 thì thẻ cols2 sẽ bị kéo lên trên
+        để tránh việc bị kéo lên trên phải sử dụng thuộc tính clear
+            +clear:right thì chống được float:right
+            +clear:left thì chống được float:left
+            +clear:both thì chống được float của cả 2 phía
+    </pre>
+    <div class="container">
+        <div class="col1">đây là cột 1</div>
+        <div class="col2">đây là cột 2</div>
+    </div>
+</body>
+</html>
