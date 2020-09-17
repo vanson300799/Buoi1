@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            color:red;
+            border: 5px solid orange;
+            width:500px;
+            height:300px;
+            transition: 1s;
+           margin: 50px auto;
+        }
+        div:hover{
+            /*transform: translate(30px,60px);*/
+            /*transform: rotate(360deg);*/
+            /*transform:scale(1.1,1.1);*/
+            /*transform: skew(15deg,-20deg);*/
+            transform: matrix(scaleX(1.2),skewY(15deg),skewX(15deg),scaleY(1.5)
+            ,translateX(10px),translateY(20px));
+        }
+    </style>
+</head>                                                                                 q
+<body>
+    <pre>
+    thuộc tính transform trong css để thay đổi hình dạng của thẻ html
+    theo các cách khác nhau trong đó
+    có các giá trị sau :
+    translate() dịch chuyển vị trí theo chiều ngang và chiều dọc
+    rotate() xoay
+    scaleX() thay đổi kích thước theo chiều ngang
+    scaleY() thay đổi kích thước theo chiều dọc
+    scale() thay đổi kích thước
+    skewX() nghiêng theo chiều ngang
+    skewY() nghiêng theo chiều dọc
+    skew() làm nghiêng theo chiều ngang và chiều dọc
+    matrix() tổng hợp của tất cả các kiểu trên bao gồm skew , rotate, translate , scale
+    viết theo công thức thứ tự như sau :
+    matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+    </pre>
+    <div>
+        đây là thẻ div
+    </div>
+</body>
+</html>
