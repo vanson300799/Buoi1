@@ -13,12 +13,14 @@
     opacity: 0;
     visibility: hidden;
 }
+.header{position: relative;}
 .slider{
     position: relative;
     width: 794px;
     height: 415px;
     cursor: pointer;
     overflow: hidden;
+    margin: 0;
 }
 .prev{
     position: absolute;
@@ -27,7 +29,7 @@
     width:40px;
     z-index: 4;
     opacity: 0;
-    visibility: hidden
+    visibility: hidden;
 }
 .next{
     position: absolute;
@@ -39,8 +41,13 @@
 }
 .nut-slide ul{
     overflow: hidden;
-    width: 100000px;
+    width: 1798px;
     position: absolute;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
 }
 .nut-slide li{
     list-style: none;
@@ -62,9 +69,10 @@
 .nut-slide li.do{
     background-color: red;
 }
+.content{float:right;position: absolute;top:0px;left:798px;}
 /* Hiệu ứng */
 .slider:hover .prev{
-    animation: di-vao-ben-phai 0.15s forwards;
+    animation: di-vao-ben-phai 0.1s forwards;
 }
 @-webkit-keyframes di-vao-ben-phai{
     0% {
@@ -79,7 +87,7 @@
     }
 }
 .slider:hover .next{
-    animation: di-vao-ben-trai 0.15s forwards;
+    animation: di-vao-ben-trai 0.1s forwards;
 }
 @-webkit-keyframes di-vao-ben-trai{
     0% {
@@ -94,7 +102,7 @@
     }
 }
 ._1slide.troi-sang-trai{
-    animation: troi-sang-trai 0.25s forwards;
+    animation: troi-sang-trai 0.1s forwards;
 }
 @-webkit-keyframes troi-sang-trai{
     0% {
@@ -109,7 +117,7 @@
     }
 }
 ._1slide.vao-ben-phai{
-    animation: vao-ben-phai 0.25s forwards;
+    animation: vao-ben-phai 0.1s forwards;
 }
 @-webkit-keyframes vao-ben-phai{
     0% {
@@ -125,7 +133,7 @@
 }
 
 ._1slide.troi-sang-phai{
-    animation: troi-sang-phai 0.25s forwards;
+    animation: troi-sang-phai 0.1s forwards;
 }
 @-webkit-keyframes troi-sang-phai{
     0% {
@@ -140,7 +148,7 @@
     }
 }
 ._1slide.vao-ben-trai{
-    animation: vao-ben-trai 0.25s forwards;
+    animation: vao-ben-trai 0.1s forwards;
 }
 @-webkit-keyframes vao-ben-trai{
     0% {
@@ -155,27 +163,24 @@
     }
 }
 .chuyen-slide.di-chuyen-sang-trai{
-    animation: di-chuyen-sang-trai 0.15s forwards;
+    animation: di-chuyen-sang-trai 0s forwards;
 }
 @-webkit-keyframes di-chuyen-sang-trai{
     0% {
         left:0%;
     }
     100%{
-        left:'+=-794px';
+        left:-796px;
     }
 }
 .chuyen-slide.di-chuyen-sang-phai{
-    animation: di-chuyen-sang-phai 0.15s forwards;
+    animation: di-chuyen-sang-phai 0 forwards;
 }
 @-webkit-keyframes di-chuyen-sang-phai{
     0% {
-        left:-794px;
+        left:-796px;
     }
     100%{
-        left:0%;
+        left:0;
     }
-}
-.hoatdong{
-    left:-100px;
 }

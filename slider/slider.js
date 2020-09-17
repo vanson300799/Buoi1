@@ -9,10 +9,11 @@ $(function() {
             vitri = 0;
         }
         $('.nut-slide ul li:nth-child('+(vitri+1)+')').addClass('do');
-        if((vitri+1)%4 == 0 ){
-            $('.chuyen-slide').addClass('di-chuyen-sang-trai').one('webkitAnimationEnd',function (event) {
-                $('chuyen-slide').removeClass('di-chuyen-sang-trai')
-            });
+        if(vitri == 4){
+            $('.chuyen-slide').addClass('di-chuyen-sang-trai');
+        }
+        if(vitri == 0){
+            $('.chuyen-slide').removeClass('di-chuyen-sang-trai');
         }
 
         // xu ly phan slide
@@ -48,10 +49,11 @@ $(function() {
             vitri = 0;
         }
         $('.nut-slide ul li:nth-child('+(vitri+1)+')').addClass('do');
-        if((vitri)%4 == 0 ){
-            $('.chuyen-slide').addClass('di-chuyen-sang-trai').one('webkitAnimationEnd',function (event) {
-                $('chuyen-slide').removeClass('di-chuyen-sang-trai');
-            });
+        if(vitri == 4){
+            $('.chuyen-slide').addClass('di-chuyen-sang-trai');
+        }
+        if(vitri == 0){
+            $('.chuyen-slide').removeClass('di-chuyen-sang-trai');
         }
 
         // xu ly phan slide
@@ -77,7 +79,7 @@ $(function() {
     // nut prev
     $('.prev').click(function (event) { 
         clearInterval(thoigian);
-        var truoc = $('.active').prev();
+        var truoc  = $('.active').prev();
         // xu ly phan nut
         var vitri = $('.do').index() + 1;
         $('.nut-slide ul li').removeClass('do');
@@ -86,9 +88,11 @@ $(function() {
         }
 
         $('.nut-slide ul li:nth-child('+(vitri-1)+')').addClass('do');
-        if((vitri-1)%4 == 0 ){
-            $('.chuyen-slide').addClass('di-chuyen-sang-phai').one('webkitAnimationEnd',function (event) {
-            });
+        if(vitri == 5 ){
+            $('.chuyen-slide').removeClass('di-chuyen-sang-trai');
+        }
+        if(vitri == 9){
+            $('.chuyen-slide').addClass('di-chuyen-sang-trai');
         }
 
         // xu ly phan slide
@@ -113,6 +117,7 @@ $(function() {
     });
     // nut chuyen slide
     $('.nut-slide ul li').click(function(event){
+        clearInterval(thoigian);
         $('.nut-slide ul li').removeClass('do');
         $(this).addClass('do');
 
